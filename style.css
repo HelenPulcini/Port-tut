@@ -1,0 +1,382 @@
+/*https://www.youtube.com/watch?v=wX1T5mR_yVc&list=PLfVxbRIcicREvxnfsrWqiyPrjiVdnbLa_&index=6*/
+
+* { 
+    transition: all 0.5s ease;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    outline: 0;
+}
+
+h1 {
+    margin: 10px 10px 10px 10px;
+    padding: 20px 10px 20px 10px;
+    /* border: solid 7px #55707c; */
+
+    font-weight: bold;
+    background: -webkit-linear-gradient(65deg, white, #0f394b, rgb(96, 149, 184), #154f68, rgb(96, 149, 184), #0f394b, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 4.5vw;
+    font-family: 'Parisienne', cursive;
+    text-align: center
+}
+
+body {
+    background-color: #F4EDF3;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 1% 20%;
+    width: 40vw;
+    height:fit-content;
+    margin: 3vh 0;
+    box-shadow: 0 5px 10px 0 #55707c8f, 0 2px 6px 2px rgba(51, 56, 59, 0.15);
+}
+
+.container:before {
+    /*this allows you to modify the effect of the background image only*/
+    position: absolute;
+    /* absolute z-1 to the normal container which is relative z 1 */
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/17/19/14/background-6804433__340.jpg);
+    filter: opacity(30%);
+    content: "";
+    /*this is to actually insert the image*/
+}
+
+a {
+    color: #5d3364;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(238, 236, 236);
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    width: 50%; */
+}
+
+header nav button {
+    display: none;
+}
+
+nav {
+    display: flex;    
+}
+
+li {
+    position: relative;
+}
+
+nav a {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    padding: 10px 20px 10px 0;
+    font-weight: 500;
+}
+
+nav a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #5d3364;
+    position: absolute;
+    bottom: -4px;
+    left: -7.5%;
+    transition: all 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav,
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 150%;
+    /*Gradient to write on the left hand side - set 90 deg and end in transparent*/
+    background: linear-gradient(90deg, #f6edecf1, #f6edec0e);
+    padding: 5px 0 5px 2px;
+    color: #5d3364;
+}
+
+h4 {
+    font-family: 'EB Garamond', serif;
+    background: linear-gradient(90deg, #f6edecd3, #f6edec52);
+    color: #5d3364;
+}
+
+p {
+    background: #f6edecee;
+    font-family: 'EB Garamond', serif;
+    font-size: 150%;
+    text-align: justify;
+    color: #5d3364;
+}
+
+/*How to write on top of an image: See HTML container + top.left*/
+.inner-cont {
+    margin: 2vh;
+    position: relative;
+}
+
+.inner-cont img {
+    width: 43%;
+    border-radius: 10px;
+    margin: 0 1.5rem 1.5rem 0;
+    float: left;
+    box-shadow: 0 5px 10px 0 #55707c8f;
+    position: relative;
+    left: -12px;
+    top: 10px;
+}
+
+.top-left {
+    color: rgb(78, 79, 129);
+    font-family: 'Parisienne', cursive;
+    font-size: 2vw;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.text {
+    clear: right;
+}
+
+ul {
+    font-family: 'EB Garamond', serif;
+    font-size: 150%;
+}
+
+form {
+    padding-bottom: 7%;
+}
+
+fieldset {
+    margin: auto;
+    width: 50%;
+    border: solid 2px #55707c;
+    border-radius: 50px 50px 50px 50px;
+}
+
+textarea {
+    width: 40vw;
+    height: 20vh;
+    border: solid 1px #55707c;
+    border-radius: 0 0 50px 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: #f6edeca6;
+    font-size: 2em;
+    font-family: 'EB Garamond', serif;
+}
+
+main {
+    padding-bottom: 5%;
+    position: relative;
+    top: 2vh;
+}
+
+.fade {
+    width: 18vw;
+    height: 45vh;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 5px 10px 0 #55707c8f;
+    filter: opacity(60%);
+    transition: all 1s;
+    /*put the transition time in the parent to slow both in and out :hover*/
+}
+
+.fade:hover {
+    filter: opacity(100%);
+    width: 18vw;
+    height: 38vh;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+}
+
+.proleft,
+.proright {
+    display: flex;
+    margin-top: 10%;
+    position: relative;
+}
+
+.proleft {
+    flex-direction: row-reverse;
+}
+
+.desc {
+    padding: 20px;
+    width: 18vw;
+}
+
+i {
+    font-size: x-large;
+    color: #5d3364;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.skillcont {
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill .head {
+    background-color: #76939eb9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+
+.skill .head h4 {
+    font-size: 1.5rem;
+    background: none;
+}
+
+.items {
+    display: none;
+}
+
+
+.show-items {
+    display: block;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.2rem;
+    padding: 0 1rem;
+    background-color: #bdcacfb9;
+}
+
+.item:hover {
+    background-color: #e6f3fab9;
+
+}
+
+.progress-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 1rem;
+    background-color: #F4EDF3;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    width: 90%;
+    background-color: #a158adbd;
+}
+
+.item:nth-child(2) .progress-bar .progress {
+    width: 90%;
+}
+
+.item:nth-child(3) .progress-bar .progress {
+    width: 83%;
+}
+
+.contact .over .box input,
+.sub {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid #5d3364;
+}
+
+.contact .over .box input:focus {
+    background: #f0d4f5;
+}
+
+.contact .over .box input::placeholder,
+.contact .over .box textarea::placeholder {
+    color: #5d3364;
+    font-weight: 400;
+    font-family: 'EB Garamond', serif;
+}
+
+.contact .over .box textarea {
+    color: #5d3364;
+    font-family: 'EB Garamond', serif;
+}
+
+.logo {
+    font-family: 'Parisienne', cursive;
+    font-weight: bolder;
+    color: #0f394b;
+    font-size: 1vw;
+    width: fit-content;
+}
+
+footer {
+    margin-top: 25%;
+}
+
+.foot-con {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot-con ul {
+    display: flex;
+    gap: 5rem;
+}
+
+.foot-con ul li {
+    color: #5d3364;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
