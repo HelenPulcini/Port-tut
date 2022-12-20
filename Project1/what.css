@@ -1,0 +1,133 @@
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1483232539664-d89822fb5d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    /* background-size: cover; */
+    /* background-repeat: repeat-x; */
+    width: 60%;
+    padding: 2% 20% ;
+    /* margin: auto; */
+} 
+
+h1,h2,details,figure {
+    color: white;
+}
+
+h1 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    text-align: center;
+}
+
+i {
+    padding-left: 5px;
+}
+
+i:hover {
+    font-size: larger;
+}
+.sun {
+    width: 80px;
+    height: 80px;
+}
+
+.contnav {
+    background: #b034348f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    padding: 4px 0;
+    margin: auto;  /* Important - Aligns it to the centre*/
+
+}
+.itnav {
+    color: white;
+    /* list-style: none; */
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: auto; /* Important - Aligns it to the centre*/
+
+}
+
+.box {
+    border: solid 2px white;
+    margin: 1%;
+    color: white;
+}
+
+.measure {
+    width: 99%;
+    height: 465px;
+    margin: 1%;
+}
+
+.range{
+    position: relative;
+    bottom: 20px;
+    right: -120px;
+}
+
+/* #pic1 {
+    filter:brightness(300%)
+}
+#pic2 {
+    filter:contrast(180%)
+}
+#pic3 {
+    filter:grayscale(85%)
+}
+#pic4 {
+    filter:sepia(100%)
+}
+#pic5 {
+    filter:opacity(60%)
+}
+
+#pic6 {
+    filter: saturate(300%);
+} */
+
+.smcont {
+    position:fixed; /*Let the rest scroll*/
+    top: 10%;
+    left: 20px;
+    width:17%;
+    border: solid 1px whitesmoke;
+}
+
+.small {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+}
+
+.one {
+    border: solid 5px red;
+    z-index:2;
+    left: 50px;
+}
+
+.two {
+    border: solid 5px yellow;
+    z-index:1;
+    left: 80px;
+}
+
+.three {
+    border: solid 5px green;
+    z-index:0;
+    left: 80px;
+}
+
+footer {
+    border: solid 1px yellow;
+    padding: 2%;
+    margin: 5%;
+}

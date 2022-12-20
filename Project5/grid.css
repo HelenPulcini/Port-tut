@@ -1,0 +1,314 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(238, 240, 240, 0.938);
+
+}
+
+.grid {
+    padding: 20px 0;
+    width: 65%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'header header header nav'
+        'drop drop drop drop'
+        'foll foll foll foll'
+        'aside main main main'
+        'aside review review review'
+        'footer footer footer footer'
+    ;
+}
+
+header {
+    grid-area: header;
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    line-height: 3px;
+    margin-left: 8%;
+}
+
+.nav {
+    grid-area: nav;
+    margin-right: 8%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.drop {
+    grid-area: drop;
+    border: solid 1px;
+    color: white;
+    background-color: #14094e;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 3em;
+    position: relative;
+}
+
+.drop.content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    border: solid;
+    z-index: 1;
+}
+
+.content .active {
+    display: block;
+    color: black;
+    width: 5em;
+    height: 2em;
+}
+
+.follow {
+    grid-area: foll;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+}
+
+aside {
+    grid-area: aside;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+main {
+    grid-area: main;
+}
+
+.review {
+    grid-area: review;
+}
+
+footer {
+    grid-area: footer;
+    border: solid 1px;
+}
+
+header h1 {
+    color: rgb(197, 45, 45);
+}
+
+header h4 {
+    font-weight: 300;
+}
+
+header h6 {
+    font-weight: lighter;
+}
+
+header img {
+    float: left;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    padding-right: 30px;
+}
+
+.links {
+    background-color: #c4bedf;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+}
+
+.show-links {
+    height: 100%;
+}
+
+.links li {
+    list-style: none;
+    padding: 2px 15px;
+}
+
+.links li a {
+    text-decoration: none;
+}
+
+.nav-toggle {
+    font-size: 2em;
+    border: none;
+    color: rgb(75, 54, 168);
+}
+
+.follow a {
+    color: #14094e;
+    padding: 0 20px;
+}
+
+main img {
+    width: 100%;
+}
+
+.guide,
+.accordion {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+    margin: 10px;
+}
+
+.guide a {
+    color: #14094e;
+    font-family: 'Roboto Slab', serif;
+    font-size: larger;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+}
+
+#pension,
+#key {
+    color: antiquewhite;
+    display: inline-block;
+    background-color: #14094e;
+    padding: 0 10px;
+    margin: 5px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#pension {
+    font-size: 40px;
+}
+
+#key {
+    font-size: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.rel {
+    border-radius: 10px;
+    background-color: white;
+    width: 60%;
+    padding: 30px 0 0 30px;
+    position: relative;
+    top: -40px;
+    left: 40px;
+}
+
+.text {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.par {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(73, 73, 73);
+}
+
+.text .par i {
+    color: gold;
+    padding-right: 10px;
+    font-size: larger;
+}
+
+fieldset {
+    font-family: 'Roboto Slab', serif;
+    background-color: #14094e;
+    color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    text-align: justify;
+}
+
+legend {
+    background-color: rgb(184, 34, 34);
+    padding: 5px 20px;
+    font-weight: bolder;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 5px;
+}
+
+.input {
+    display: flex;
+}
+
+#email {
+    padding: 5px 10px 5px 5px;
+    width: 175px;
+    border-radius: 5px 0 0 5px;
+}
+
+#btn {
+    background-color: rgb(184, 34, 34);
+    border: none;
+    color: antiquewhite;
+    font-weight: bolder;
+    border-radius: 0 5px 5px 0;
+}
+
+#free,
+#mse {
+    display: inline-block;
+    background-color: rgb(40, 40, 73);
+    padding: 0 10px;
+    margin: 5px;
+}
+
+.content {
+    display: none;
+}
+
+.tab-btn {
+    border: none;
+    color: antiquewhite;
+    background-color: rgb(40, 40, 73);
+    height: 3em;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: rgb(49, 36, 110);
+}
+
+.tab-btn.active {
+    background-color: rgb(75, 54, 168);
+    color: antiquewhite
+}
+
+.review {
+    text-align: center;
+    width: 38%;
+    background-color: white;
+    margin: 2% auto;
+    border-radius: 10px;
+}
+
+#person-img {
+    margin-top: 2em;
+    border: solid grey 1px;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 5px 5px 5px rgb(124, 124, 223);
+}
+
+.btn-container {
+    border: solid;
+    margin-top: 3em;
+}
+
+.random-btn {
+    margin: 1em 0;
+}
+
+.rev {
+    height: 15vh;
+    overflow: scroll;
+}

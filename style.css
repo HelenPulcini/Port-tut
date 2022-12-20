@@ -8,21 +8,6 @@
     outline: 0;
 }
 
-h1 {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 10px 20px 10px;
-    /* border: solid 7px #55707c; */
-
-    font-weight: bold;
-    background: -webkit-linear-gradient(65deg, white, #0f394b, rgb(96, 149, 184), #154f68, rgb(96, 149, 184), #0f394b, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font-size: 4.5vw;
-    font-family: 'Parisienne', cursive;
-    text-align: center
-}
-
 body {
     background-color: #F4EDF3;
     display: flex;
@@ -55,8 +40,21 @@ body {
     /*this is to actually insert the image*/
 }
 
-a {
-    color: #5d3364;
+/*---------HEADER-----------*/
+
+h1 {
+    margin: 10px 10px 10px 10px;
+    padding: 20px 10px 20px 10px;
+    /* border: solid 7px #55707c; */
+
+    font-weight: bold;
+    background: -webkit-linear-gradient(65deg, white, #0f394b, rgb(96, 149, 184), #154f68, rgb(96, 149, 184), #0f394b, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 4.5vw;
+    font-family: 'Parisienne', cursive;
+    text-align: center
 }
 
 header {
@@ -72,26 +70,23 @@ header {
     width: 50%; */
 }
 
-header nav button {
-    display: none;
-}
-
 nav {
     display: flex;    
 }
 
-li {
-    position: relative;
+nav li {
+    position: relative; /*this allows the ::after underline to be there*/
 }
 
-nav a {
+nav li a {
     font-size: 1.8rem;
     font-weight: bolder;
     padding: 10px 20px 10px 0;
     font-weight: 500;
+    color: #5d3364;
 }
 
-nav a::after {
+nav li a::after {
     content: "";
     width: 0;
     height: 3px;
@@ -102,7 +97,7 @@ nav a::after {
     transition: all 0.5s ease-in-out;
 }
 
-nav a:hover::after {
+nav li a:hover::after {
     width: 100%;
 }
 
@@ -114,6 +109,14 @@ h2 {
     background: linear-gradient(90deg, #f6edecf1, #f6edec0e);
     padding: 5px 0 5px 2px;
     color: #5d3364;
+}
+
+/*-----------MAIN-----------*/
+
+main {
+    padding-bottom: 5%;
+    position: relative;
+    top: 2vh;
 }
 
 h4 {
@@ -161,82 +164,7 @@ p {
     clear: right;
 }
 
-ul {
-    font-family: 'EB Garamond', serif;
-    font-size: 150%;
-}
-
-form {
-    padding-bottom: 7%;
-}
-
-fieldset {
-    margin: auto;
-    width: 50%;
-    border: solid 2px #55707c;
-    border-radius: 50px 50px 50px 50px;
-}
-
-textarea {
-    width: 40vw;
-    height: 20vh;
-    border: solid 1px #55707c;
-    border-radius: 0 0 50px 50px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    background-color: #f6edeca6;
-    font-size: 2em;
-    font-family: 'EB Garamond', serif;
-}
-
-main {
-    padding-bottom: 5%;
-    position: relative;
-    top: 2vh;
-}
-
-.fade {
-    width: 18vw;
-    height: 45vh;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 5px 10px 0 #55707c8f;
-    filter: opacity(60%);
-    transition: all 1s;
-    /*put the transition time in the parent to slow both in and out :hover*/
-}
-
-.fade:hover {
-    filter: opacity(100%);
-    width: 18vw;
-    height: 38vh;
-}
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    max-width: 50rem;
-}
-
-.proleft,
-.proright {
-    display: flex;
-    margin-top: 10%;
-    position: relative;
-}
-
-.proleft {
-    flex-direction: row-reverse;
-}
-
-.desc {
-    padding: 20px;
-    width: 18vw;
-}
-
-i {
-    font-size: x-large;
-    color: #5d3364;
-}
+/*------------SKILLS-------------*/
 
 .skills h2 {
     text-align: center;
@@ -323,6 +251,58 @@ i {
     width: 83%;
 }
 
+.item:nth-child(4) .progress-bar .progress {
+    width: 60%;
+}
+
+
+/*----------PROJECTS-------------*/
+
+.fade {
+    width: 18vw;
+    height: 45vh;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 5px 10px 0 #55707c8f;
+    filter: opacity(60%);
+    transition: all 1s;
+    /*put the transition time in the parent to slow both in and out :hover*/
+}
+
+.fade:hover {
+    filter: opacity(100%);
+    width: 18vw;
+    height: 38vh;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+}
+
+.proleft,
+.proright {
+    display: flex;
+    margin-top: 10%;
+    position: relative;
+}
+
+.proleft {
+    flex-direction: row-reverse;
+}
+
+.desc {
+    padding: 20px;
+    width: 18vw;
+}
+
+i {
+    font-size: x-large;
+    color: #5d3364;
+}
+
+/*----------CONTACT------------*/
+
 .contact .over .box input,
 .sub {
     display: block;
@@ -347,6 +327,31 @@ i {
     color: #5d3364;
     font-family: 'EB Garamond', serif;
 }
+
+form {
+    padding-bottom: 7%;
+}
+
+fieldset {
+    margin: auto;
+    width: 50%;
+    border: solid 2px #55707c;
+    border-radius: 50px 50px 50px 50px;
+}
+
+textarea {
+    width: 40vw;
+    height: 20vh;
+    border: solid 1px #55707c;
+    border-radius: 0 0 50px 50px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: #f6edeca6;
+    font-size: 2em;
+    font-family: 'EB Garamond', serif;
+}
+
+/*-----------FOOTER---------*/
 
 .logo {
     font-family: 'Parisienne', cursive;
@@ -379,4 +384,67 @@ footer {
 .socials {
     display: flex;
     gap: 1rem;
+}
+
+
+@media (max-width: 568px){
+    .container {
+        width: 85vw;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav li a, h2 {
+        font-size: 1.3rem;
+    }
+
+    .projects {
+        display: block;
+        
+    }
+    
+    .proleft,
+    .proright {
+        display: block;
+    }
+    
+    .desc {
+        padding: 20px;
+        width: 80vw;
+    }
+
+    .fade {
+        width: 80vw;
+    }
+    
+    .fade:hover {
+        width: 80vw;
+    }
+
+    .foot-con ul li {
+        font-size: 1.3rem;
+    }
+
+    .foot-con ul {
+        gap: 0.3rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    textarea {
+        width: 100%;
+    } 
+
+    .contact .over .box textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact .over .box, fieldset {
+        margin: auto;
+        width: 80%;
+    }
 }
