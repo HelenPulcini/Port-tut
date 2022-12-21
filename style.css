@@ -8,6 +8,10 @@
     outline: 0;
 }
 
+a, .skills h2, .desc h2, h5 {
+    color:#0f394b;
+}
+
 body {
     background-color: #F4EDF3;
     display: flex;
@@ -30,11 +34,11 @@ body {
     /* absolute z-1 to the normal container which is relative z 1 */
     z-index: -1;
     top: 0;
-    right: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-image: url(https://cdn.pixabay.com/photo/2021/11/17/19/14/background-6804433__340.jpg);
+    /* background-image: url(/background-6804433_640.jpg); */
     filter: opacity(30%);
     content: "";
     /*this is to actually insert the image*/
@@ -83,7 +87,6 @@ nav li a {
     font-weight: bolder;
     padding: 10px 20px 10px 0;
     font-weight: 500;
-    color: #5d3364;
 }
 
 nav li a::after {
@@ -210,7 +213,7 @@ p {
 }
 
 
-.item {
+.itemW, .itemS {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -219,7 +222,7 @@ p {
     background-color: #bdcacfb9;
 }
 
-.item:hover {
+.itemW:hover, .itemS:hover {
     background-color: #e6f3fab9;
 
 }
@@ -237,22 +240,32 @@ p {
     background-color: #F4EDF3;
 }
 
-.progress-bar .progress {
+.itemW .progress-area .progress-bar .progress {
     height: 100%;
     width: 90%;
     background-color: #a158adbd;
 }
 
-.item:nth-child(2) .progress-bar .progress {
+.itemW:nth-child(2) .progress-area .progress-bar .progress {
     width: 90%;
 }
 
-.item:nth-child(3) .progress-bar .progress {
+.itemW:nth-child(3) .progress-area .progress-bar .progress {
     width: 83%;
 }
 
-.item:nth-child(4) .progress-bar .progress {
+.itemS .progress-area .progress-bar .progress {
+    height: 100%;
+    width: 85%;
+    background-color: #a158adbd;
+}
+
+.itemS:nth-child(2) .progress-area .progress-bar .progress {
     width: 60%;
+}
+
+.itemS:nth-child(3) .progress-area .progress-bar .progress {
+    width: 70%;
 }
 
 
@@ -374,11 +387,11 @@ footer {
 
 .foot-con ul {
     display: flex;
-    gap: 5rem;
+    gap: 7rem;
 }
 
 .foot-con ul li {
-    color: #5d3364;
+    font-size: 1.5rem;
 }
 
 .socials {
