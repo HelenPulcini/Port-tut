@@ -339,6 +339,7 @@ i {
 .contact .over .box textarea {
     color: #5d3364;
     font-family: 'EB Garamond', serif;
+    font-size: 1rem;
 }
 
 form {
@@ -349,7 +350,7 @@ fieldset {
     margin: auto;
     width: 50%;
     border: solid 2px #55707c;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 50px;
 }
 
 textarea {
@@ -362,6 +363,11 @@ textarea {
     background-color: #f6edeca6;
     font-size: 2em;
     font-family: 'EB Garamond', serif;
+}
+
+.sub {
+    border-radius: 10px ;
+    color: #5d3364;
 }
 
 /*-----------FOOTER---------*/
@@ -452,7 +458,7 @@ footer {
         width: 100%;
     } 
 
-    .contact .over .box textarea::placeholder {
+    .contact .over .box textarea::placeholder, legend p {
         font-size: 1rem;
     }
 

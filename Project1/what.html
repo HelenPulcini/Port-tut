@@ -7,10 +7,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/Fav/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/Fav/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/Fav/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="/Fav/favicon_io/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Project1/Fav/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Project1/Fav/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Project1/Fav/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/Project1/Fav/favicon_io/site.webmanifest">
 
   <script src="https://kit.fontawesome.com/f97819ca2f.js" crossorigin="anonymous"></script>
 
@@ -26,96 +26,178 @@
 <body>
   <h1>Brightness Opacity Saturation</h1>
   <nav>
-    <nav class="contnav">
-      <li class="itnav">Home</li>
-      <li class="itnav">About</li>
-      <li class="itnav">Services</li>
-      <li class="itnav">Contact</li>
-      <li class="itnav">Search <input type="text" placeholder="Enter your text here"></li>
-    </nav>
+    <button onclick="setLink()">Set Link</button>
+    <button onclick="clearLink()">Clear Link</button>
+    <button id="reset-cust">Reset Cust</button>
+    <button id="reset-all">Reset All</button>
   </nav>
-  <!-- <h2>Today's news <i class="fa-solid fa-cat"></i></h2> -->
-  <br>
-  <!-- <div class="container">
-    <div class="box"><img src=""alt="" class="measure"><br>BRIGHTNESS <div class="range"><input type="range" name="" class="brightness" min="0.1" max="1" value="0.75" step="0.05"></div></div>
-    <div class="box"><img src=""alt="" class="measure"><br>CONTRAST <div class="range"><input type="range" name="" id=""></div></div>
-    <div class="box"><img src=""alt="" class="measure"><br>GREYSCALE <div class="range"><input type="range" name="" id=""></div></div>
-    <div class="box"><img src=""alt="" class="measure"><br>SEPIA <div class="range"><input type="range" name="" id=""></div></div>
-    <div class="box"><img src=""alt="" class="measure"><br>OPACITY <div class="range"><input type="range" name="" id=""></div></div>
-    <div class="box"><img src=""alt="" class="measure"><br>SATURATION <div class="range"><input type="range" name="" id=""></div></div>
+  <div class="custom">
+    <input type="value" value="" placeholder="Copy and paste any image address and press Set Link">
+    <div id="page">
+      <img src="" id="custom-pic">
+    </div>
   </div>
-  <br> -->
+
   <div class="container">
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic1">                
-      <div class="val" id="slider1value"></div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic1">
+      <div class="val" id="slider1value">100%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider1" min="0" max="500" value="100">
+        <label for="slider1">BRIGHTNESS</label>
+        <button id="reset1">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic2">
+      <div class="val" id="slider2value">100%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider2" min="0" max="500" value="100">
+        <label for="slider2">CONTRAST</label>
+        <button id="reset2">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic3">
+      <div class="val" id="slider3value">0%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider3" min="0" max="100" value="0">
+        <label for="slider3">GREYSCALE</label>
+        <button id="reset3">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic4">
+      <div class="val" id="slider4value">0%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider4" min="0" max="100" value="0">
+        <label for="slider4">SEPIA</label>
+        <button id="reset4">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic5">
+      <div class="val" id="slider5value">100%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider5" min="0" max="100" value="100">
+        <label for="slider5">OPACITY</label>
+        <button id="reset5">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic6">
+      <div class="val" id="slider6value">100%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider6" min="0" max="500" value="100">
+        <label for="slider6">SATURATION</label>
+        <button id="reset6">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic7">
+      <div class="val" id="slider7value">0</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider7" min="0" max="360" value="0">
+        <label for="slider7">HUE</label>
+        <button id="reset7">Reset</button>
+      </div>
+    </div>
+    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic8">
+      <div class="val" id="slider8value">0%</div>
+      <div class="banner">
+        <input type="range" class="slider" id="slider8" min="0" max="100" value="0">
+        <label for="slider8">INVERT</label>
+        <button id="reset8">Reset</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic1">
+        <div class="val" id="slider1value"></div>
         <input type="range" class="slider" id="slider1" min="0" max="500" value="100">
         <label for="slider1">BRIGHTNESS</label>
       </div>
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic2">
-      <div class="val" id="slider2value"></div>
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic2">
+        <div class="val" id="slider2value"></div>
         <input type="range" class="slider" id="slider2" min="0" max="500" value="100">
         <label for="slider2">CONTRAST</label>
-    </div>
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic3">
-      <div class="val" id="slider3value"></div>
+      </div>
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic3">
+        <div class="val" id="slider3value"></div>
         <input type="range" class="slider" id="slider3" min="0" max="100" value="0">
         <label for="slider3">GREYSCALE</label>
-    </div>
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic4">
-      <div class="val" id="slider4value"></div>
+      </div>
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic4">
+        <div class="val" id="slider4value"></div>
         <input type="range" class="slider" id="slider4" min="0" max="100" value="0">
         <label for="slider4">SEPIA</label>
-    </div>
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic5">
-      <div class="val" id="slider5value"></div>
-        <input type="range" class="slider" id="slider5" min="0" max="100" value="0">
-        <label for="slider5">OPACITY</label>
-    </div>
-    <div class="box"><img src="/Project1/eye-7440640_1280.jpg" alt="" class="measure" id="pic6">
-      <div class="val" id="slider6value"></div>
-        <input type="range" class="slider" id="slider6" min="0" max="500" value="100">
-        <label for="slider6">SATURATION</label>
-    </div>
-  </div>
-  
-
-
-
-
-
-
-
-
-  <div class="container">
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure"
-        id="pic7"><br>BRIGHTNESS <div class="range"><input type="range" name="" class="brightness" min="0.1" max="1"
-          value="0.75" step="0.05"></div>
-    </div>
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic8"><br>CONTRAST
-      <div class="range"><input type="range" name="" id=""></div>
-    </div>
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic9"><br>GREYSCALE
-      <div class="range"><input type="range" name="" id=""></div>
-    </div>
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic10"><br>SEPIA
-      <div class="range"><input type="range" name="" id=""></div>
-    </div>
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic11"><br>OPACITY
-      <div class="range"><input type="range" name="" id=""></div>
-    </div>
-    <div class="box"><img src="/Project1/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure"
-        id="pic12"><br>SATURATION <div class="range"><input type="range" name="" id=""></div>
-    </div>
-  </div>
+      </div>
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic5">
+          <div class="val" id="slider5value"></div>
+          <input type="range" class="slider" id="slider5" min="0" max="100" value="0">
+          <label for="slider5">OPACITY</label>
+      </div>
+      <div class="box"><img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="measure" id="pic6">
+          <div class="val" id="slider6value"></div>
+          <input type="range" class="slider" id="slider6" min="0" max="500" value="100">
+          <label for="slider6">SATURATION</label>
+      </div>
+      </div> -->
 
   <div class="smcont">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small one" id="pic1">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small two" id="pic2">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small three" id="pic3">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small three" id="pic4">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small one" id="pic5">
-    <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small two" id="pic6">
+    <div class="sliderblock">
+      <div class="val" id="sliderBvalue">100%</div>
+      <input type="range" class="slider" id="sliderB" min="0" max="500" value="100">
+      <label for="sliderB">BRIGHTNESS</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderCvalue">100%</div>
+      <input type="range" class="slider" id="sliderC" min="0" max="500" value="100">
+      <label for="sliderC">CONTRAST</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderGvalue">0%</div>
+      <input type="range" class="slider" id="sliderG" min="0" max="100" value="0">
+      <label for="sliderG">GREYSCALE</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderSvalue">0%</div>
+      <input type="range" class="slider" id="sliderS" min="0" max="100" value="0">
+      <label for="sliderS">SEPIA</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderOvalue">100%</div>
+      <input type="range" class="slider" id="sliderO" min="0" max="100" value="0">
+      <label for="sliderO">OPACITY</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderTvalue">100%</div>
+      <input type="range" class="slider" id="sliderT" min="0" max="500" value="100">
+      <label for="sliderT">SATURATE</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderHvalue">0</div>
+      <input type="range" class="slider" id="sliderH" min="0" max="360" value="0">
+      <label for="sliderH">HUE</label>
+    </div>
+    <div class="sliderblock">
+      <div class="val" id="sliderIvalue">0%</div>
+      <input type="range" class="slider" id="sliderI" min="0" max="100" value="0">
+      <label for="sliderI">INVERT</label>
+    </div>
   </div>
+
+  <!-- <div class="smcont">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small one" id="pic1">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small two" id="pic2">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small three" id="pic3">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small three" id="pic4">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small one" id="pic5">
+        <img src="/alex-trajilovic-02QcEe6cgXc-unsplash.jpg" alt="" class="small two" id="pic6">
+      </div> -->
 
   <footer>
     <details>

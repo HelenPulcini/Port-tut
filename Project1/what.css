@@ -8,7 +8,7 @@ body {
     /* margin: auto; */
 } 
 
-h1,h2,details,figure {
+h1, details {
     color: white;
 }
 
@@ -18,19 +18,7 @@ h1 {
     text-align: center;
 }
 
-i {
-    padding-left: 5px;
-}
-
-i:hover {
-    font-size: larger;
-}
-.sun {
-    width: 80px;
-    height: 80px;
-}
-
-.contnav {
+nav {
     background: #b034348f;
     display: flex;
     flex-direction: row;
@@ -40,10 +28,26 @@ i:hover {
     margin: auto;  /* Important - Aligns it to the centre*/
 
 }
-.itnav {
+nav li {
     color: white;
-    /* list-style: none; */
+    list-style: none;
     font-weight: 900;
+}
+
+.custom {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin: 5% auto;
+}
+
+.custom input {
+    appearance: none;
+    outline: none;
+    width: 80%;
+    height: 2rem;
+    margin-bottom: 5%;
 }
 
 .container {
@@ -59,19 +63,106 @@ i:hover {
 .box {
     border: solid 2px white;
     margin: 1%;
+}
+
+label, .val {
     color: white;
+    font-weight: bolder;
+}
+
+.banner label {
+    font-size: larger;
+}
+
+.sliderblock {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 10vh;
 }
 
 .measure {
     width: 99%;
     height: 465px;
-    margin: 1%;
+    margin: auto;
 }
 
-.range{
-    position: relative;
-    bottom: 20px;
-    right: -120px;
+.banner {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 235, 205, 0.479);
+}
+
+.smcont {
+    position:fixed; /*Let the rest scroll*/
+    top: 10%;
+    left: 20px;
+    width:17%;
+    border: solid 1px whitesmoke;
+    background: #b034348f;
+
+}
+
+.small {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+}
+
+footer {
+    border: solid 1px yellow;
+    padding: 2%;
+    margin: 5%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+}
+
+
+input[type="range"] {
+	-webkit-appearance: none;
+	background: transparent;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+input[type="range"]:hover {
+	outline: none;
+}
+input[type="range"]::-ms-track {
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 5px;
+	cursor: pointer;
+	background: rgb(250, 251, 252);
+	box-shadow: 0px 0px 10px 15px rgba(248, 228, 228, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	height: 5px;
+	width: 8px;
+	/* border-radius: 10px; */
+	background: #0d24f3;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px 15px rgba(248, 228, 228, 0.2);
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+	box-shadow: 0px 0px 10px 5px rgba(214, 43, 43, 0.5);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+	box-shadow: 0px 0px 10px 5px rgba(211, 47, 47, 0.5);
 }
 
 /* #pic1 {
@@ -94,40 +185,36 @@ i:hover {
     filter: saturate(300%);
 } */
 
-.smcont {
-    position:fixed; /*Let the rest scroll*/
-    top: 10%;
-    left: 20px;
-    width:17%;
-    border: solid 1px whitesmoke;
-}
 
-.small {
-    width: 40%;
-    height: 40%;
-    margin: 10px;
-}
+@media (max-width: 568px) {
 
-.one {
-    border: solid 5px red;
-    z-index:2;
-    left: 50px;
-}
+    body, .custom {
+        width: 100vw;
+    }
+    .container, .sliderblock {
+        display: block;
+        width: 98%;
+    }
 
-.two {
-    border: solid 5px yellow;
-    z-index:1;
-    left: 80px;
-}
+    .box {
+        margin-top: 5%;
+    }
 
-.three {
-    border: solid 5px green;
-    z-index:0;
-    left: 80px;
-}
+    nav, .custom input {
+        width: 100%;
+    }
 
-footer {
-    border: solid 1px yellow;
-    padding: 2%;
-    margin: 5%;
+    .sliderblock {
+        transform: rotate(-90deg);
+        transform-origin: -10 -50;
+        height: 20vh;
+        width: fit-content;
+    }
+
+    .smcont {
+        position: absolute;
+        border: none;
+        background: none;
+    }
+
 }
