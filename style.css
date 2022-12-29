@@ -6,6 +6,8 @@
     list-style: none;
     text-decoration: none;
     outline: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a, .skills h2, .desc h2, h5 {
@@ -63,6 +65,7 @@ h1 {
 
 header {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     /* background-color: rgb(238, 236, 236);
@@ -316,27 +319,26 @@ i {
 
 /*----------CONTACT------------*/
 
-.contact .over .box input,
-.sub {
+.box input:not(.sub) {
     display: block;
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     background: transparent;
-    border: 1px solid #5d3364;
+    border: solid 1px #55707c;
 }
 
-.contact .over .box input:focus {
+.box input:focus {
     background: #f0d4f5;
 }
 
-.contact .over .box input::placeholder,
-.contact .over .box textarea::placeholder {
+.box input::placeholder,
+.box textarea::placeholder {
     color: #5d3364;
     font-weight: 400;
     font-family: 'EB Garamond', serif;
 }
 
-.contact .over .box textarea {
+.box textarea {
     color: #5d3364;
     font-family: 'EB Garamond', serif;
     font-size: 1rem;
@@ -344,13 +346,6 @@ i {
 
 form {
     padding-bottom: 7%;
-}
-
-fieldset {
-    margin: auto;
-    width: 50%;
-    border: solid 2px #55707c;
-    border-radius: 50px;
 }
 
 textarea {
@@ -361,13 +356,17 @@ textarea {
     padding: 12px 20px;
     box-sizing: border-box;
     background-color: #f6edeca6;
-    font-size: 2em;
+    font-size: 1rem;
     font-family: 'EB Garamond', serif;
 }
 
-.sub {
-    border-radius: 10px ;
-    color: #5d3364;
+.kwes-form .sub {
+    all: unset;
+    color:#5d3364;
+    border: solid 1px #55707c;
+    padding: 0.7rem 1.7rem;
+    border-radius: 15px;
+
 }
 
 /*-----------FOOTER---------*/
@@ -442,6 +441,10 @@ footer {
         width: 80vw;
     }
 
+    .foot-con ul li a {
+        font-size: 1rem;
+    }
+
     .foot-con ul li {
         font-size: 1.3rem;
     }
@@ -457,6 +460,10 @@ footer {
     textarea {
         width: 100%;
     } 
+
+    .contact .over .box input:not(.sub) {
+        width: 80%;
+    }
 
     .contact .over .box textarea::placeholder, legend p {
         font-size: 1rem;
