@@ -10,8 +10,16 @@
     padding: 0;
 }
 
+:root {
+    --font-family: 'EB Garamond', serif;
+    --text-color: #5d3364;
+    --blue-text: #0f394b;
+
+
+}
+
 a, .skills h2, .desc h2, h5 {
-    color:#0f394b;
+    color: var(--blue-text)
 }
 
 body {
@@ -55,6 +63,7 @@ h1 {
 
     font-weight: bold;
     background: -webkit-linear-gradient(65deg, white, #0f394b, rgb(96, 149, 184), #154f68, rgb(96, 149, 184), #0f394b, white);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -96,7 +105,7 @@ nav li a::after {
     content: "";
     width: 0;
     height: 3px;
-    background-color: #5d3364;
+    background-color: var(--text-color);
     position: absolute;
     bottom: -4px;
     left: -7.5%;
@@ -114,7 +123,7 @@ h2 {
     /*Gradient to write on the left hand side - set 90 deg and end in transparent*/
     background: linear-gradient(90deg, #f6edecf1, #f6edec0e);
     padding: 5px 0 5px 2px;
-    color: #5d3364;
+    color: var(--text-color);
 }
 
 /*-----------MAIN-----------*/
@@ -128,7 +137,7 @@ main {
 h4 {
     font-family: 'EB Garamond', serif;
     background: linear-gradient(90deg, #f6edecd3, #f6edec52);
-    color: #5d3364;
+    color: var(--text-color);
 }
 
 p {
@@ -136,7 +145,7 @@ p {
     font-family: 'EB Garamond', serif;
     font-size: 150%;
     text-align: justify;
-    color: #5d3364;
+    color: var(--text-color);
 }
 
 /*How to write on top of an image: See HTML container + top.left*/
@@ -175,6 +184,7 @@ p {
 .skills h2 {
     text-align: center;
     font-size: 2rem;
+    margin: 5%;
 }
 
 .skillcont {
@@ -185,7 +195,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding: 0.5rem;
     gap: 2rem;
+}
+
+.left img {
+    width: 40px;
+    height: auto;
 }
 
 .skill {
@@ -216,17 +232,17 @@ p {
 }
 
 
-.itemW, .itemS {
+.itemW, .itemS, .itemC{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 0.2rem;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     background-color: #bdcacfb9;
 }
 
-.itemW:hover, .itemS:hover {
-    background-color: #e6f3fab9;
+.itemW:hover, .itemS:hover, .itemC:hover {
+    background-color: #d4dde0b9;
 
 }
 
@@ -235,6 +251,12 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.progress-area img {
+    width: 25px;
+    height: auto;
+    box-shadow: 0 0 5px 5px #76939eb9, 0 0 2px 2px #a158adbd;
 }
 
 .progress-bar {
@@ -254,7 +276,11 @@ p {
 }
 
 .itemW:nth-child(3) .progress-area .progress-bar .progress {
-    width: 83%;
+    width: 80%;
+}
+
+.itemW:nth-child(4) .progress-area .progress-bar .progress {
+    width: 65%;
 }
 
 .itemS .progress-area .progress-bar .progress {
@@ -271,8 +297,26 @@ p {
     width: 70%;
 }
 
+.itemC .progress-area .progress-bar .progress {
+    height: 100%;
+    width: 75%;
+    background-color: #a158adbd;
+}
+
+.itemC:nth-child(2) .progress-area .progress-bar .progress {
+    width: 75%;
+}
+
+.itemC:nth-child(3) .progress-area .progress-bar .progress {
+    width: 70%;
+}
+
 
 /*----------PROJECTS-------------*/
+ h3 {
+  color: var(--text-color);
+  line-height: 2.5rem;
+ }
 
 .fade {
     width: 18vw;
@@ -312,9 +356,17 @@ p {
     width: 18vw;
 }
 
-i {
+.desc i {
     font-size: x-large;
-    color: #5d3364;
+    color: var(--text-color);
+    padding: 5% 1%;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background:#55707c;
+    margin: 2% 0;
 }
 
 /*----------CONTACT------------*/
@@ -333,13 +385,13 @@ i {
 
 .box input::placeholder,
 .box textarea::placeholder {
-    color: #5d3364;
+    color: var(--text-color);
     font-weight: 400;
     font-family: 'EB Garamond', serif;
 }
 
 .box textarea {
-    color: #5d3364;
+    color: var(--text-color);
     font-family: 'EB Garamond', serif;
     font-size: 1rem;
 }
@@ -362,7 +414,7 @@ textarea {
 
 .kwes-form .sub {
     all: unset;
-    color:#5d3364;
+    color:var(--text-color);
     border: solid 1px #55707c;
     padding: 0.7rem 1.7rem;
     border-radius: 15px;
@@ -404,6 +456,10 @@ footer {
     gap: 1rem;
 }
 
+.copyright {
+    color: var(--text-color);
+}
+
 
 @media (max-width: 568px){
     .container {
@@ -411,10 +467,17 @@ footer {
     }
 
     h1 {
+        width: 100%;
         font-size: 2.5rem;
     }
+    nav li a {
+        font-size: 1.2rem;
+        font-weight: bolder;
+        font-weight: 500;
+        padding: 0 0.2rem;
+    }
 
-    nav li a, h2 {
+    h2 {
         font-size: 1.3rem;
     }
 
@@ -441,16 +504,41 @@ footer {
         width: 80vw;
     }
 
-    .foot-con ul li a {
+    .line {
+        width: 100%;
+        height: 3px;
+        background:#55707c;
+        margin: 5% 0;
+    }
+
+    .foot-con {
+        width: 100%;
+        display: block
+    }
+    
+    .foot-con ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+    }
+    
+    .foot-con ul li {
         font-size: 1rem;
     }
-
-    .foot-con ul li {
-        font-size: 1.3rem;
+    
+    .socials {
+        display: flex;
+        justify-content: center;
+        margin: 1%;
+        gap: 1rem;
+    }
+    
+    .copyright {
+        color: var(--text-color);
     }
 
-    .foot-con ul {
-        gap: 0.3rem;
+    .ref {
+        font-size: xx-small;
     }
 
     .logo {
