@@ -330,8 +330,6 @@ p {
 
 .fade:hover {
     filter: opacity(100%);
-    width: 18vw;
-    height: 38vh;
 }
 
 .projects {
@@ -477,6 +475,13 @@ footer {
         padding: 0 0.2rem;
     }
 
+    .top-left {
+        font-size: 0.7rem;
+        position: absolute;
+        top: 15px;
+        left: 1%;
+    }
+
     h2 {
         font-size: 1.3rem;
     }
@@ -534,7 +539,7 @@ footer {
     }
     
     .copyright {
-        color: var(--text-color);
+        font-size: small;
     }
 
     .ref {
