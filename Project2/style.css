@@ -78,6 +78,7 @@ header {
     width: 100%;
 }
 
+
 #menu-icon {
     font-size: 24px;
     cursor: pointer;
@@ -85,7 +86,9 @@ header {
     display: none;
 }
 
-.header-btn a{
+.header-btn button {
+    cursor: pointer;
+    border: none;
     padding: 10px 20px;
     color: var(--text-color);
     font-weight: 500;
@@ -124,7 +127,7 @@ background: var(--main-color);
     color: var(--main-color);
 }
 
-.text p {
+.home .text p {
     margin: 1rem 0.5rem 0 1rem;
 }
 
@@ -153,23 +156,24 @@ background: var(--main-color);
 }
 
 .input-box {
-    flex: 1 1 7rem; /*no difference?*/ 
+    flex: 1 1 7rem;
     display: flex;
     flex-direction: column;
 }
 .input-box span {
     font-weight: 500;
 }
-.input-box input {
+.input-box input, .input-box select {
     padding: 7px;
     border: none;
-    outline: none; /*no difference?*/ 
+    outline: none; 
     background: #eeeff1;
     border-radius: 0.5rem;
     font-size: 1rem;
 }
+
 .form-container form .btn {
-    flex: 1 1 7rem; /*no difference?*/ 
+    flex: 1 1 7rem;
     padding: 10px 34px;
     border: none;
     border-radius: 0.5rem;
@@ -238,12 +242,14 @@ background: var(--main-color);
     box-shadow: 1px 4px 4px rgb(49, 49, 49);
 }
 
-.services-container .box .box-img {
+.services-container .box .about-box {
+    position: relative;
     width: 100%;
     height: 200px;
 }
 
-.services-container .box .box-img img {
+.services-container .box .about-box img {
+    position: absolute;
     width: 300px;
     height: 200px;
     border-radius: 1rem;
@@ -251,7 +257,7 @@ background: var(--main-color);
     object-position: center;
 }
 
-.services-container .box p {
+.services-container .box p:not(.ot-box p) {
     padding: 0 10px;
     border: 1px solid var(--text-color);
     width:fit-content;
@@ -263,7 +269,7 @@ background: var(--main-color);
     font-weight: 500;
 }
 
-.services-container .box h2 {
+.services-container .box h2:not(.ot-box h2) {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--main-color);
@@ -308,7 +314,7 @@ background: var(--main-color);
     text-transform: uppercase;
 }
 
-.about-text p {
+.about .about-text p {
     text-align: justify;
     margin: 0.5rem 0 1.4rem;
 }
@@ -401,6 +407,59 @@ background: var(--main-color);
     font-size: 21px;
 }
 
+.about-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px; /*top 0 left 0 makes the box coincide with the img*/
+    left: 0px;
+    background: transparent;
+    z-index: -1;
+}
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(167, 165, 165, 0.692);
+    padding: 10px;
+    clip-path: circle(0% at 50% 50%);
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ot-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ot-box h2 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.ot-box p {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.about-box:hover .about-overlay {
+    clip-path: circle(70% at 50% 50%);
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 @media (max-width:991px) {
     header {
         padding: 18px 40px;
@@ -417,8 +476,9 @@ background: var(--main-color);
         bottom: 0.2rem;
         left: 40px;
     }
-    .sign-up {
-        display: none;
+    
+    .header-btn button {
+        padding: 10px 20px;
     }
 }
 @media (max-width:768px) {
@@ -428,8 +488,8 @@ background: var(--main-color);
     #menu-icon {
         display: initial;
     }
-    .sign-up {
-        display: none;
+    .header-btn button {
+        padding: 10px 20px;
     }
     .text h1 {
         font-size: 2.5rem;
@@ -473,7 +533,7 @@ background: var(--main-color);
     .heading span {
         font-size: 0.9rem;
     }
-    heading h1 {
+    .heading h1 {
         font-size: 1.3rem;
     }
     .about-container {
@@ -486,6 +546,10 @@ background: var(--main-color);
     }
 }
 @media (max-width:568px) {
+
+    .home {
+        top: 8vh;
+    }
     .copyright {
         flex-direction: column;
     }
@@ -495,22 +559,28 @@ background: var(--main-color);
     .form-container {
         padding-top: 2rem;
     }
+
+    .header-btn {
+        display: flex;
+        flex-direction: column;
+    }
+    .header-btn .sign-in {
+        padding: 7px 5px;
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
 @media (max-width:350px) {
     header {
         padding: 4px 14px;
     }
-    .logo img {
-        width: 30px;
+    .home {
+        top: 5vh;
     }
     section {
         padding: 50px 14px;
     }
-    .header-btn .sign-in {
-        padding: 7px 10px;
-        font-size: 14px;
-        font-weight: 400;
-    }
+
     .text h1 {
         font-size: 2rem;
     }

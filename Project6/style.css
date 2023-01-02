@@ -194,6 +194,8 @@ body {
 
 .lsc_header {
     display: flex;
+    position: relative;
+    top: 8vh;
 }
 
 .lsc_header-content {

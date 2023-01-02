@@ -2,21 +2,26 @@
 <html lang="en">
 
 <head>
-   <link rel="apple-touch-icon" sizes="180x180" href="/Project2/Images/favicon_io/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="/Project2/Images/favicon_io/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="/Project2/Images/favicon_io/favicon-16x16.png">
-   <link rel="manifest" href="/Project2/Images/favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Project2/Images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Project2/Images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Project2/Images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/Project2/Images/favicon_io/site.webmanifest">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f97819ca2f.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="/Project2/style.css">
+    <link rel="stylesheet" href="/Project2/signup.css">
+
     <title>Home-to-Home</title>
 </head>
 
@@ -32,8 +37,74 @@
             <li><a href="#reviews">Reviews</a></li>
         </ul>
         <div class="header-btn">
-            <a href="#" class="sign-up">Sign Up</a>
-            <a href="#" class="sign-in">Sign In</a>
+            <button class="sign-up">Sign Up</button>
+            <button class="sign-in">Sign In</button>
+        </div>
+
+        <div class="container scale-up-center">
+            <span class="close-log" title="Close Modal">&times;</span>
+            <form class="login-content" action="/action_page.php">
+                <h1>Sign In</h1>
+                <div class="row">
+                    <div class="vl">
+                        <span class="vl-innertext">or</span>
+                    </div>
+
+                    <div class="col">
+                        <a href="#" class="fb btn">
+                            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                        </a>
+                        <a href="#" class="twitter btn">
+                            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                        </a>
+                        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                            </i> Login with Google+
+                        </a>
+                    </div>
+
+                    <div class="col">
+                        <div class="hide-md-lg">
+                            <p>Or sign in manually:</p>
+                        </div>
+
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" value="Login">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+     
+        <div class="modal scale-up-center" id="appear">
+            <span class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container-mod">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.
+                    </p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </header>
     <section class="home" id="home">
@@ -41,15 +112,58 @@
             <h1><span>Home-to-home</span><br>Homestays<br>and experiences.</h1>
             <p>Lorem ipsum dolor sit amet consectetur,<br>adipisicing elit. Sed, inventore</p>
             <div class="app-stores">
-                <img src="/Project2/Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="">
-                <img src="/Project2/Images/google-play-badge.png" alt="">
+                <a href="https://www.apple.com/uk/app-store/" target="_blank"><img
+                        src="/Project2/Images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt=""></a>
+                <a href="https://play.google.com/" target="_blank"><img src="/Project2/Images/google-play-badge.png" alt=""></a>
             </div>
         </div>
         <div class="form-container">
             <form action="">
                 <div class="input-box">
                     <span>Location</span>
-                    <input type="search" name="" id="" placeholder="Search Places">
+                    <!-- <input type="search" name="" id="" placeholder="Search Places"> -->
+                    <select id="country" name="country">
+                        <optgroup label="Europe">
+                            <option>Italy</option>
+                            <option>France</option>
+                            <option>Spain</option>
+                            <option>Norway</option>
+                            <option>UK</option>
+                            <option>Greece</option>
+                        </optgroup>
+                        <optgroup label="South America">
+                            <option>Colombia</option>
+                            <option>Brasil</option>
+                            <option>Argentina</option>
+                            <option>Venezuela</option>
+                            <option>Peru</option>
+                            <option>Chile</option>
+                        </optgroup>
+                        <optgroup label="North America">
+                            <option>Canada</option>
+                            <option>Greenland</option>
+                            <option>Alaska</option>
+                            <option>Hawaii</option>
+                            <option>Florida</option>
+                            <option>California</option>
+                        </optgroup>
+                        <optgroup label="Africa">
+                            <option>Ghana</option>
+                            <option>Egypt</option>
+                            <option>Angola</option>
+                            <option>South Africa</option>
+                            <option>Kenya</option>
+                            <option>Madagascar</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                            <option>Thailand</option>
+                            <option>Japan</option>
+                            <option>Indonesia</option>
+                            <option>India</option>
+                            <option>Kazakhstan</option>
+                            <option>Vietnam</option>
+                        </optgroup>
+                    </select>
                 </div>
                 <div class="input-box">
                     <span>Check-in Date</span>
@@ -96,8 +210,24 @@
         </div>
         <div class="services-container">
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-1.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -105,8 +235,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-2.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -114,8 +260,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-3.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -123,8 +285,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-4.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -132,8 +310,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-5.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -141,8 +335,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-6.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -150,8 +360,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-7.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -159,8 +385,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-8.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -168,8 +410,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-9.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -177,8 +435,24 @@
                 <a href="#" class="btn">Rent now</a>
             </div>
             <div class="box">
-                <div class="box-img">
+                <div class="about-box">
                     <img src="/Project2/Images/house-10.jpg" alt="">
+                    <div class="about-overlay">
+                        <div class="overlay-text">
+                            <div class="ot-box">
+                                <h2>Cleanliness</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Service</h2>
+                                <p>5 stars</p>
+                            </div>
+                            <div class="ot-box">
+                                <h2>Value</h2>
+                                <p>5 stars</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <p>Whole House</p>
                 <h3>Location</h3>
@@ -280,7 +554,7 @@
             <a href="https://facebook.com/" target="_blank"><i class="bx bxl-facebook"></i></a>
             <a href="https://twitter.com/" target="_blank"><i class="bx bxl-twitter"></i></a>
             <a href="https://instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
-        </div> 
+        </div>
     </div>
     <script src="/Project2/script.js"></script>
 </body>

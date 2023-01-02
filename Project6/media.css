@@ -1,11 +1,11 @@
 
 @media screen and (max-width: 1050px) {
 
-    .lsc_navbar-links_container {
+    .lsc-navbar-links_container {
         display: none;
     }
 
-    .lsc_navbar-menu {
+    .lsc-navbar-menu {
         display: flex;
     }
 
@@ -70,7 +70,7 @@
         margin: 4rem;
     }
 
-    .lsc_navbar {
+    .lsc-navbar {
         padding: 2rem 4rem;
     }
 
@@ -122,19 +122,6 @@
         line-height: 60px;
     }
 
-    .lsc_header-content p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-    
-    .lsc_header-content__people {
-        flex-direction: column;
-    }
-
-    .lsc_header-content__people p {
-        margin: 0;
-    }
-
     .lsc_header-content_input input,
     .lsc_header-content_input button {
         font-size: 16px;
@@ -165,19 +152,19 @@
         margin: 4rem 2rem;
     }
 
-    .lsc_navbar {
+    .lsc-navbar {
         padding: 2rem;
     }
 
-    .lsc_navbar-sign {
+    .lsc-navbar-sign {
         display: none;
     }
 
-    .lsc_navbar-menu_container {
+    .lsc-navbar-menu_container {
         top: 20px;
     }
 
-    .lsc_navbar-menu_container-links-sign {
+    .lsc-navbar-menu_container-links-sign {
         display: block;
     }
 
