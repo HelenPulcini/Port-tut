@@ -144,7 +144,7 @@ p {
     background: #f6edecee;
     font-family: 'EB Garamond', serif;
     font-size: 150%;
-    text-align: justify;
+    /* text-align:justify; */
     color: var(--text-color);
 }
 
@@ -285,7 +285,7 @@ p {
 
 .itemS .progress-area .progress-bar .progress {
     height: 100%;
-    width: 85%;
+    width: 60%;
     background-color: #a158adbd;
 }
 
