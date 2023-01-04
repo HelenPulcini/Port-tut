@@ -144,7 +144,7 @@ p {
     background: #f6edecee;
     font-family: 'EB Garamond', serif;
     font-size: 150%;
-    /* text-align:justify; */
+    text-align:justify;
     color: var(--text-color);
 }
 
