@@ -295,12 +295,12 @@ p {
 
 .itemC .progress-area .progress-bar .progress {
     height: 100%;
-    width: 60%;
+    width: 50%;
     background-color: #a158adbd;
 }
 
 .itemC:nth-child(2) .progress-area .progress-bar .progress {
-    width: 60%;
+    width: 50%;
 }
 
 .itemC:nth-child(3) .progress-area .progress-bar .progress {
@@ -316,7 +316,7 @@ p {
 
 .fade {
     width: 18vw;
-    height: 45vh;
+    height: 30rem;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0 5px 10px 0 #55707c8f;
     filter: opacity(60%);
@@ -338,7 +338,6 @@ p {
 .proright {
     display: flex;
     margin-top: 10%;
-    position: relative;
 }
 
 .proleft {
@@ -457,7 +456,38 @@ footer {
 .copyright {
     color: var(--text-color);
 }
+@media (max-width: 900px){
+    .container {
+        width: 100%;
+    }
 
+    h1 {
+        width: 100%;
+        font-size: 3.5rem;
+    }
+
+    .projects {
+        display: block;   
+    }
+
+    .proleft,
+    .proright {
+        display: block;
+    }
+
+    .desc {
+        padding: 20px;
+        width: 100%;
+    }
+    .fade {
+        width: 350px;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 @media (max-width: 568px){
     .container {
@@ -502,11 +532,8 @@ footer {
     }
 
     .fade {
-        width: 80vw;
-    }
-    
-    .fade:hover {
-        width: 80vw;
+        width: 90vw;
+        filter: opacity(100%);
     }
 
     .line {

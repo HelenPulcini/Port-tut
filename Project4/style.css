@@ -22,7 +22,7 @@ body {
 }
 
 .score {
-    background-color: rgba(250, 235, 215, 0.295);
+    /* background-color: rgba(250, 235, 215, 0.295); */
     font-size: 4em;
     font-weight: 900;
     color: aqua;
@@ -62,6 +62,7 @@ body {
     display: grid; 
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -91,7 +92,7 @@ body {
 .instruction p {
     width: fit-content;
     margin: auto;
-    background-color: rgba(5, 5, 5, 0.986);
+    background-color: #403020a8;
     color: aqua;
     font-size: 1.5rem;
 }
@@ -102,19 +103,9 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-
-    .instruction {
+    
+    .hide {
         display: none;
-    }
-
-    .container {
-        display: block;
-    }
-
-    .mobile {
-        width: fit-content;
-        margin: auto;
-        padding: 2.5%
     }
  
     .score {
