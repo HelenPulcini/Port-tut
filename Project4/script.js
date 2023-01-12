@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         direction = 1;
         scoreDisplay.innerText = score;
         intervalTime = 1000;
-        currentSnake = [2, 1, 0];
+        currentSnake = [2,1,0];
         currentIndex = 0;
         currentSnake.forEach(function (index) {
             squares[index].classList.add("snake")
@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    /*mobile controls*/ 
 
     let larr = document.getElementById("larr");
     larr.addEventListener("click", l => {
