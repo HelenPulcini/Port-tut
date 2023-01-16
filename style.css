@@ -456,7 +456,7 @@ footer {
 .copyright {
     color: var(--text-color);
 }
-@media (max-width: 900px){
+@media (max-width: 1280px){
     .container {
         width: 100%;
     }
