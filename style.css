@@ -140,6 +140,10 @@ h4 {
     color: var(--text-color);
 }
 
+.pre {
+    font-family: 'VT323', monospace;
+}
+
 p {
     background: #f6edecee;
     font-family: 'EB Garamond', serif;
@@ -285,11 +289,15 @@ p {
 
 .itemS .progress-area .progress-bar .progress {
     height: 100%;
-    width: 40%;
+    width: 50%;
     background-color: #a158adbd;
 }
 
 .itemS:nth-child(2) .progress-area .progress-bar .progress {
+    width: 40%;
+}
+
+.itemS:nth-child(3) .progress-area .progress-bar .progress {
     width: 60%;
 }
 
